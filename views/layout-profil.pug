@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+html(lang="fr")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0")
+        link(href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous")
+        link(rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css")
+        link(rel='stylesheet' href='css/main.css')
+        link(rel='stylesheet' href='css/general_v1.css')
+        title Agartha
+    body
+        include ./includes/topbar.pug
+        .container-fluid
+            div(class="menu-admin")
+                div(class="app-sidebar__user")
+                    img(class="app-sidebar__user-avatar" src="./images/profil-pic.jpg" alt="User Image" style="width: 90px")
+                    div(class="")
+                        p(class="app-sidebar__user-name") John Doe
+
+                ul(class="app-menu")
+                    li
+                        a(class="app-menu__item" href="dashboard.html")
+                            i(class="app-menu__icon fa fa-dashboard")
+                            span(class="app-menu__label") Dashboard
+                    li(class="treeview")
+                        a(class="app-menu__item" href="#" data-toggle="treeview")
+                            i(class="app-menu__icon fa fa-laptop")
+                            span(class="app-menu__label") UI Elements
+                            i(class="treeview-indicator fa fa-angle-right")
+                                ul(class="treeview-menu")
+                                    li
+                                        a(class="treeview-item" href="bootstrap-components.html")
+                                            i(class="icon fa fa-circle-o") Bootstrap Elements
+                                    li
+                                        a(class="treeview-item" href="https://fontawesome.com/v4.7.0/icons/" target="_blank" rel="noopener")
+                                            i(class="icon fa fa-circle-o") Font Icons
+                                    li
+                                        a(class="treeview-item" href="ui-cards.html")
+                                            i(class="icon fa fa-circle-o") Cards
+                                    li
+                                        a(class="treeview-item" href="widgets.html")
+                                            i(class="icon fa fa-circle-o") Widgets
+
+
+            main(class="frame2")
+                block content
+                    h1 Profil
+
+
+
+
+        script(src="js/main.js")
+        script(src="js/bootstrap.min.js")
+        script(src="js/popper.min.js")
+        script(src="js/jquery-3.3.1.min.js")
+        script(src="js/elements.v2.js")

@@ -12,5 +12,7 @@ mongoose.connect('mongodb+srv://izza:admin@cluster0.iwyr4.mongodb.net/portfolio?
     .then( () => {
         console.log("Connexion OK");
 
+        // TESTS
+
     }).catch( err => console.log(err) );
 

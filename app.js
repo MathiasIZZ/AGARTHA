@@ -2,9 +2,10 @@ const express = require('express');
 const morgan = require('morgan');
 const path = require('path');
 const app = express();
-const errorHandler = require('errorhandler')
+const errorHandler = require('errorhandler');
+const multer = require('multer');
 
-const routing = require('./routes')
+const routing = require('./routes');
 
 
 require('./database'); // LIEN VERS LA BDD

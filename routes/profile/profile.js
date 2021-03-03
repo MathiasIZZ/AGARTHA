@@ -4,24 +4,35 @@ const axios = require('axios')
 
 router.get('/', (req, res) => {
 
-    const data = axios.get('https://api.agartha.pro/user/get/', {
+    axios.get('https://api.agartha.pro/user/get/', {
         auth: {
             username: 'mathious@agartha.pro',
             password: 'motdepassedifficile'
         }
     }).then( (data) => {
-        console.log(data)
+        const profil_infos = data.data[0];
+
+        /*res.cookie('key', 456, {
+            domain: ''
+        });*/
+
+        console.log(profil_infos)
+
+        res.render('profile', { profil_infos });
     })
-
-    res.render('profile', { data } );
-
-
-
-
-
-
-
 });
+
+router.get('/avatar', (req, res) => {
+    console.log('page avatar')
+
+    res.render('user-avatar');
+});
+
+router.post('/changeavatar', (req, res) => {
+
+    console.log(req.body);
+    res.end();
+})
 
 
 
