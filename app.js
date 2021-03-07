@@ -3,7 +3,7 @@ const morgan = require('morgan');
 const path = require('path');
 const app = express();
 const errorHandler = require('errorhandler');
-const multer = require('multer');
+
 
 const routing = require('./routes');
 
